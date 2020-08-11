@@ -13,7 +13,7 @@
                     {{seller.description}}/{{seller.deliveryTime}}分钟送达
                 </div>
                 <div v-if="seller.supports && seller.supports.length" class="support">
-                    <small-icon :size=1 :type="seller.supports[0].type" />
+                    <small-icon :size=1 :type="seller.supports[0].type" class="support-icon"/>
                     <span class="text">{{seller.supports[0].description}}</span>
                 </div>
             </div>
@@ -98,7 +98,7 @@ export default {
                 .support
                     display: flex
                     align-items: center
-                    .support-ico
+                    .support-icon
                         margin-right: 4px
                     .text
                         font-size: $fontsize-small-s
