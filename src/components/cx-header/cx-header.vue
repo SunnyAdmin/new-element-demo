@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" @click="handleClickDetail">
         <div class="content-wrapper">
             <div class="avatar">
                 <img width="64" height="64" :src="seller.avatar" />
@@ -35,6 +35,7 @@
 
 <script>
 import SmallIcon from 'components/small-icon/small-icon'
+
 export default {
     props: {
         seller: {
@@ -44,6 +45,16 @@ export default {
     },
     components: {
         SmallIcon
+    },
+    methods: {
+        handleClickDetail() {
+            this.headerDetailEl = this.$createHeaderDialog({
+                $props: {
+                    seller: 'seller'
+                }
+            })
+            this.headerDetailEl.show()
+        }
     }
 }
 </script>

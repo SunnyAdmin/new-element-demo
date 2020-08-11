@@ -30,7 +30,7 @@ export default {
             // 如果true，则分数就是整数，反之是小数
             const hasInteger = (score % 1) === 0
             let resultNum = hasInteger ? score : Math.floor(score)
-            for(let i = 0; i < resultNum.length; i++) {
+            for(let i = 0; i < resultNum; i++) {
                 result.push(CLS_ON)
             }
             if(!hasInteger) {

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import './cube-ui'
 import App from './App.vue'
+import './createApi'
 // import router from './router'
 // import store from './store'
 
